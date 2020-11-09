@@ -5,6 +5,8 @@ const cors = require('cors');
 const bodyparser = require('body-parser');
 let dir = process.cwd();
 
+const port = process.env.PORT || 4000;
+
 const app = express();
 app.use(cors());
 app.use(bodyparser.json());
@@ -100,4 +102,4 @@ app.get('/addfile', async(req, res) => {
 
 
 
-app.listen(4000, () => { console.log("server started at 4000!!") })
+app.listen(port, () => { console.log("server started at 4000!!") })
